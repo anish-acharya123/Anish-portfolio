@@ -1,0 +1,91 @@
+.home-main {
+  height: 88vh;
+  padding: 5rem 0 0 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+.home-content {
+  display: flex;
+}
+.home-first {
+  width: 70%;
+}
+.name-start {
+  position: relative;
+  padding-left: 2rem;
+  color: gray;
+  /* font-size: 2rem; */
+}
+
+.name-start::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  background: rgb(206, 203, 203);
+  width: 1.5rem;
+  height: 0.3rem;
+}
+.name-end {
+  font-size: 4rem;
+}
+span {
+  color: #0087ca;
+}
+.writer {
+  display: flex;
+}
+.writer span {
+  margin-left: 0.2rem;
+}
+.home-icons svg {
+  height: 2rem;
+  width: 2rem;
+  margin: 0 3rem 0 0;
+  cursor: pointer;
+  color: white;
+}
+.home a {
+  text-decoration: none;
+}
+.home-second {
+  width: 30%;
+  /* border: 1px solid red; */
+  /* display: flex; */
+  justify-content: center;
+}
+.image-div {
+  height: 20rem;
+  border-radius: 2rem;
+  width: 20rem;
+  position: relative;
+  background-image: url(../../assets/imgaes/anish.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 0;
+}
+.image-div::before {
+  transform: rotate(-10deg);
+  background-color: #0087ca;
+  content: "";
+  border-radius: 2rem;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  /* right: 5rem; */
+  /* transform: rotate(0deg); */
+  z-index: -1;
+}
+.image-div:hover {
+  box-shadow: gray 0px 5px 15px;
+}
+.image-div:hover::before {
+  transition: all 1s ease-in-out;
+  transform: rotate(0deg);
+  /* background-color: red; */
+}
