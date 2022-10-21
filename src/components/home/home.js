@@ -6,7 +6,7 @@ import { Icons } from "../../data";
 
 export default function home(props) {
   return (
-    <div className="home-main">
+    <div className="home-main" id="home">
       <div className="home-content">
         <div className="home-first">
           <div className="home-name">

@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import Navbar from "./components/navbar/navbar";
 import Home from "./components/home/home";
+import Skill from "./components/skill/skill";
 import { Icon } from "@iconify/react";
 import img from "./assets/icons/logo.svg";
 import img1 from "./assets/icons/logo2.svg";
@@ -39,8 +40,10 @@ function App() {
         textcolor={textcolor}
         icon={icon}
         toogleMode={toogleMode}
+        mode={mode}
       />
       <Home mode={mode} />
+      <Skill mode={mode} />
     </div>
   );
 }

@@ -5,10 +5,11 @@ nav {
   /* border: 2px solid red; */
   font-family: "Poppins", sans-serif;
   position: fixed;
+  z-index: 10;
 }
-/* .nav-main {
-  margin-top: 0.5rem;
-} */
+.toggle {
+  background-color: #e7e7e7;
+}
 .nav-content {
   display: flex;
   flex-direction: row;
@@ -35,6 +36,9 @@ ul {
   display: flex;
   flex-direction: row;
   /* margin-bottom: 0; */
+}
+.navbar-ul a {
+  text-decoration: none;
 }
 .nav-items {
   list-style: none;
