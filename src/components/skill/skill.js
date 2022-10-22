@@ -7,7 +7,7 @@ export default function Skill(props) {
     <div
       className="skill-main"
       style={{
-        backgroundColor: `${props.mode === "light" ? "#f7f8fa" : "black"}`,
+        backgroundColor: `${props.mode === "light" ? "#f0f0f0" : "black"}`,
       }}
       id="skill"
     >
