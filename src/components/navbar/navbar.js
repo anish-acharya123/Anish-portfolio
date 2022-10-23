@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // import img from "../assets/icons/logo.svg";
 import { Icon } from "@iconify/react";
 import { Links } from "../../data";
+// import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 export default function Navbar(props) {
@@ -17,6 +18,13 @@ export default function Navbar(props) {
   };
   window.addEventListener("scroll", changeBackground);
   console.log(window.scrollY);
+
+  const [move, setMove] = useState();
+  document.addEventListener("scroll", () => {
+    const maxHeight = document.body.scrollHeight - window.innerHeight;
+    setMove((window.pageYOffset * 100) / maxHeight);
+  });
+  console.log(move);
 
   return (
     <div>
@@ -39,16 +47,18 @@ export default function Navbar(props) {
                   href={`#${link.path}`}
                   style={{ color: `${props.textcolor}` }}
                 >
-                  <li className="nav-items" key={link.id}>
+                  <li
+                    className={`nav-items ${
+                      move < link.max_rang && move > link.min_range
+                        ? "active"
+                        : ""
+                    }`}
+                    key={link.id}
+                  >
                     {link.item}
                   </li>
                 </a>
               ))}
-
-              {/* <li className="nav-items">Home</li>
-              <li className="nav-items">Skills</li>
-              <li className="nav-items">Projects</li>
-              <li className="nav-items">Contact</li> */}
             </ul>
             <div className="btn">
               <button type="button" className="btn1" onClick={props.toogleMode}>

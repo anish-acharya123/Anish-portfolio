@@ -20,8 +20,8 @@ function App() {
   const [mode, setMode] = useState("light");
   const [textcolor, setTextcolor] = useState("black");
   const [image, setImage] = useState(img);
+
   const toogleMode = () => {
-    console.log("hi");
     // mode = "light";
     if (mode === "light") {
       setImage(img1);
@@ -39,6 +39,7 @@ function App() {
       document.body.style.color = "black";
     }
   };
+
   return (
     <div className="App">
       <Navbar

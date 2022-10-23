@@ -14,10 +14,16 @@ const tailwind = <Icon icon="bxl:tailwind-css" color="#0087ca" />;
 const git = <Icon icon="bi:git" color="#0087ca" />;
 
 export const Links = [
-  { id: 1, item: "Home", path: "home" },
-  { id: 2, item: "Skill", path: "skill" },
-  { id: 3, item: "Project", path: "project" },
-  { id: 4, item: "Contact", path: "contact" },
+  { id: 1, item: "Home", path: "home", max_rang: 50, min_range: -5 },
+  { id: 2, item: "Skill", path: "skill", max_rang: 98, min_range: 50 },
+  { id: 3, item: "Project", path: "project", max_rang: 150, min_range: 98 },
+  {
+    id: 4,
+    item: "Contact",
+    path: "contact",
+    max_rang: undefined,
+    min_range: undefined,
+  },
 ];
 
 //icons for home
