@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/navbar/navbar";
 import Home from "./components/home/home";
 import Skill from "./components/skill/skill";
+import Project from "./components/project/project";
 import { Icon } from "@iconify/react";
 import img from "./assets/icons/logo.svg";
 import img1 from "./assets/icons/logo2.svg";
@@ -49,6 +50,7 @@ function App() {
       />
       <Home mode={mode} />
       <Skill mode={mode} />
+      <Project />
     </div>
   );
 }

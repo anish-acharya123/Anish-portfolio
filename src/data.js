@@ -1,5 +1,11 @@
 //importing icons for skills
 import { Icon } from "@iconify/react";
+//importing data for projects
+import eProperty from "./assets/imgaes/eProperty.png";
+import Holi from "./assets/imgaes/holi.png";
+import Textanalyzer from "./assets/imgaes/textanalyzer.png";
+
+//importing icons for skills
 const html = <Icon icon="akar-icons:html-fill" color="#0087ca" />;
 const css = <Icon icon="akar-icons:css-fill" color="#0087ca" />;
 const javascript = <Icon icon="akar-icons:javascript-fill" color="#0087ca" />;
@@ -67,5 +73,32 @@ export const Skills = [
     icon: tailwind,
     title: "Tailwind",
     Description: "Tailwind CSS is an open source CSS framework. ",
+  },
+];
+
+export const Projects = [
+  {
+    id: 1,
+    name: "eProperty Website",
+    img: eProperty,
+    source: "React",
+    link: `https://eproperty.vercel.app/`,
+    description: "eProperty Nepal - Buy your dream house",
+  },
+  {
+    id: 1,
+    name: "Holi Project",
+    img: Holi,
+    source: "Html/Css",
+    link: `https://anish-acharya123.github.io/Holi-project/`,
+    description: "Heppy Holi to all my friends out there.",
+  },
+  {
+    id: 1,
+    name: "Textanalyzer- Text Modifier",
+    img: Textanalyzer,
+    source: "React/Bootstrap",
+    link: `https://text-analyzer-two.vercel.app/`,
+    description: " word counter use to manipulate your text .",
   },
 ];
