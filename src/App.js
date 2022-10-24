@@ -5,6 +5,7 @@ import Home from "./components/home/home";
 import Skill from "./components/skill/skill";
 import Project from "./components/project/project";
 import Contact from "./components/contact/contact";
+import Footer from "./components/footer/footer";
 import { Icon } from "@iconify/react";
 import img from "./assets/icons/logo.svg";
 import img1 from "./assets/icons/logo2.svg";
@@ -54,6 +55,7 @@ function App() {
       <Skill mode={mode} />
       <Project />
       <Contact mode={mode} />
+      <Footer mode={mode} />
     </div>
   );
 }

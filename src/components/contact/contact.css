@@ -1,10 +1,10 @@
 .main-contact {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 7.5rem 0 5rem 0rem;
-  /* height: 90vh; */
+  padding: 7rem 0 5rem 0rem;
+  height: 65vh;
+  /* overflow: hidden; */
   /* text-align: center; */
 }
 .contact-start {

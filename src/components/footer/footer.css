@@ -1,0 +1,20 @@
+.main-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+}
+.footer-text {
+  color: gray;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+}
+.footer-icons svg {
+  height: 1.5rem;
+  width: 2rem;
+  margin: 0 0rem 0 0;
+  cursor: pointer;
+  color: white;
+}
