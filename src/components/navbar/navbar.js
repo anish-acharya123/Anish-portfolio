@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import { Links } from "../../data";
 // import { NavLink } from "react-router-dom";
 import "./navbar.css";
+import { Link } from "react-scroll";
 
 export default function Navbar(props) {
   const changeBackground = () => {
@@ -19,12 +20,11 @@ export default function Navbar(props) {
   window.addEventListener("scroll", changeBackground);
   console.log(window.scrollY);
 
-  const [move, setMove] = useState();
-  document.addEventListener("scroll", () => {
-    const maxHeight = document.body.scrollHeight - window.innerHeight;
-    setMove((window.pageYOffset * 100) / maxHeight);
-  });
-  console.log(move);
+  // const [move, setMove] = useState();
+  // document.addEventListener("scroll", () => {
+  //   const maxHeight = document.body.scrollHeight - window.innerHeight;
+  //   setMove((window.pageYOffset * 100) / maxHeight);
+  // });
 
   return (
     <div>
@@ -43,21 +43,19 @@ export default function Navbar(props) {
 
             <ul className="navbar-ul">
               {Links.map((link) => (
-                <a
-                  href={`#${link.path}`}
+                <Link
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to={`${link.path}`}
                   style={{ color: `${props.textcolor}` }}
                 >
-                  <li
-                    className={`nav-items ${
-                      move < link.max_rang && move > link.min_range
-                        ? "active"
-                        : ""
-                    }`}
-                    key={link.id}
-                  >
+                  <li className={`nav-items`} key={link.id}>
                     {link.item}
                   </li>
-                </a>
+                </Link>
               ))}
             </ul>
             <div className="btn">

@@ -16,9 +16,8 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  /* padding: 0 0 0 2rem; */
 }
-.active {
+.active > .nav-items {
   color: #0087ca;
 }
 .nav-items::after {
@@ -40,6 +39,7 @@ nav {
 ul {
   display: flex;
   flex-direction: row;
+  /* padding: 0 0 0 2rem; */
   /* margin-left: 10rem; */
 }
 .navbar-ul a {

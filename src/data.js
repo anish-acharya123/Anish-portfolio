@@ -13,16 +13,22 @@ const react = <Icon icon="akar-icons:react-fill" color="#0087ca" />;
 const tailwind = <Icon icon="bxl:tailwind-css" color="#0087ca" />;
 const git = <Icon icon="bi:git" color="#0087ca" />;
 
+//importing icons for contact
+const address = <Icon icon="entypo:location" color="#0087ca" />;
+const phone = <Icon icon="bx:phone-call" color="#0087ca" />;
+const email = <Icon icon="carbon:email" color="#0087ca" />;
+
+//for navbar
 export const Links = [
-  { id: 1, item: "Home", path: "home", max_rang: 50, min_range: -5 },
-  { id: 2, item: "Skill", path: "skill", max_rang: 98, min_range: 50 },
-  { id: 3, item: "Project", path: "project", max_rang: 150, min_range: 98 },
+  { id: 1, item: "Home", path: "home", max_rang: 25, min_range: -5 },
+  { id: 2, item: "Skill", path: "skill", max_rang: 50, min_range: 25 },
+  { id: 3, item: "Project", path: "project", max_rang: 85, min_range: 50 },
   {
     id: 4,
     item: "Contact",
     path: "contact",
-    max_rang: undefined,
-    min_range: undefined,
+    max_rang: 110,
+    min_range: 85,
   },
 ];
 
@@ -82,6 +88,7 @@ export const Skills = [
   },
 ];
 
+//for project
 export const Projects = [
   {
     id: 1,
@@ -106,5 +113,27 @@ export const Projects = [
     source: "React/Bootstrap",
     link: `https://text-analyzer-two.vercel.app/`,
     description: " word counter use to manipulate your text .",
+  },
+];
+
+//for contact
+export const Contacts = [
+  {
+    id: 1,
+    item: "Address",
+    icon: address,
+    details: "Rupandehi,Nepal",
+  },
+  {
+    id: 2,
+    item: "Phone",
+    icon: phone,
+    details: "+977-9847060394",
+  },
+  {
+    id: 3,
+    item: "Email",
+    icon: email,
+    details: "acharyaanish920@gmail.com",
   },
 ];
