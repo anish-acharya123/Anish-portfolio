@@ -51,7 +51,7 @@ function App() {
         toogleMode={toogleMode}
         mode={mode}
       />
-      <Home mode={mode} />
+      <Home mode={mode} textcolor={textcolor} />
       <Skill mode={mode} />
       <Project />
       <Contact mode={mode} />

@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import Typewriter from "typewriter-effect";
 import { Icons } from "../../data";
 
-export default function home(props) {
+export default function Home(props) {
   return (
     <div className="home-main" id="home">
       <div className="home-content">
@@ -41,6 +41,14 @@ export default function home(props) {
               </a>
             ))}
           </div>
+          <button
+            type="button"
+            style={{ color: `${props.textcolor}` }}
+            className="btn2"
+            id="home-btn"
+          >
+            Resume
+          </button>
         </div>
         <div className="home-second">
           <div className="image-div"></div>

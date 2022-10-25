@@ -18,7 +18,6 @@ export default function Navbar(props) {
     // console.log(navbar);
   };
   window.addEventListener("scroll", changeBackground);
-  console.log(window.scrollY);
 
   // const [move, setMove] = useState();
   // document.addEventListener("scroll", () => {
@@ -26,25 +25,46 @@ export default function Navbar(props) {
   //   setMove((window.pageYOffset * 100) / maxHeight);
   // });
 
+  let notCross = "charm:menu-hamburger";
+  let Cross = "charm:cross";
+  const [apply, setApply] = useState(false);
+
+  const change = () => {
+    setApply(!apply);
+    let ul = document.querySelector(".navbar-ul");
+    if (apply === true) {
+      ul.classList.add("none");
+    } else {
+      ul.classList.remove("none");
+    }
+  };
+
   return (
     <div>
-      <nav>
-        <div
-          className="nav-main"
-          style={{
-            color: `${props.textcolor}`,
-            backgroundColor: `${props.mode === "black" ? "black" : ""}`,
-          }}
-        >
+      <nav
+        style={{
+          color: `${props.textcolor}`,
+          backgroundColor: `${props.mode === "black" ? "black" : ""}`,
+        }}
+      >
+        <div className="nav-main">
           <div className="nav-content">
             <a href="#">
               <img src={props.img} width="70" height="80" alt="error" />
             </a>
 
-            <ul className="navbar-ul">
+            <ul
+              className="navbar-ul"
+              style={{
+                backgroundColor: `${
+                  props.mode === "black" ? "black" : "white"
+                }`,
+              }}
+            >
               {Links.map((link) => (
                 <Link
                   activeClass="active"
+                  className="link"
                   spy={true}
                   smooth={true}
                   offset={-70}
@@ -63,9 +83,19 @@ export default function Navbar(props) {
                 {props.icon}
               </button>
               <button
+                className="hamburger"
+                onClick={change}
+                style={{
+                  color: `${props.textcolor}`,
+                }}
+              >
+                <Icon icon={apply ? Cross : notCross} />
+              </button>
+              <button
                 type="button"
                 style={{ color: `${props.textcolor}` }}
                 className="btn2"
+                id="navbar-btn"
               >
                 Resume
               </button>
