@@ -55,6 +55,7 @@ export default function Navbar(props) {
 
             <ul
               className="navbar-ul"
+              id="ul"
               style={{
                 backgroundColor: `${
                   props.mode === "black" ? "black" : "white"

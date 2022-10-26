@@ -68,6 +68,9 @@ ul {
   border-radius: 1.5rem;
   cursor: pointer;
 }
+.btn1 svg {
+  font-size: 1.5rem;
+}
 .hamburger {
   display: none;
 }
@@ -102,42 +105,53 @@ ul {
     flex-flow: column nowrap;
     position: absolute;
     /* background-color: red; */
-    top: 4rem;
+    top: 5rem;
     right: 0;
-    height: 60vh;
-    width: 50vw;
+    height: 100vh;
+    width: 100vw;
     transition: 0.5s;
     animation: slide 0.5s;
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
+    /* opacity: 0; */
   }
   @keyframes slide {
     0% {
       transform: translateX(100%);
+      opacity: 0;
+      display: none;
     }
     100% {
       transform: translateX(0%);
+      opacity: 1;
+      display: block;
     }
   }
   @keyframes slide-none {
     0% {
       transform: translateX(0%);
+      opacity: 1;
     }
     100% {
       transform: translateX(100%);
+      opacity: 0;
+      display: none;
     }
   }
 
   .none {
-    /* display: none; */
     animation: slide-none 0.5s;
     animation-fill-mode: forwards;
   }
 
   .nav-items {
-    margin: 3rem;
+    margin: 4rem;
   }
   .btn {
     margin-right: 4rem;
+  }
+
+  .btn1 svg {
+    font-size: 2rem;
   }
   .hamburger {
     display: block;
@@ -149,6 +163,6 @@ ul {
     transition: all 0.5s;
   }
   .hamburger svg {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }

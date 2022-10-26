@@ -16,8 +16,8 @@ function App() {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   });
-  let moon = <Icon icon="bytesize:moon" width={25} />;
-  let sun = <Icon icon="akar-icons:sun" width={25} color="white" />;
+  let moon = <Icon icon="bytesize:moon" />;
+  let sun = <Icon icon="akar-icons:sun" color="white" />;
   const [icon, setIcon] = useState(moon);
   const [mode, setMode] = useState("light");
   const [textcolor, setTextcolor] = useState("black");
