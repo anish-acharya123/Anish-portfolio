@@ -64,3 +64,36 @@
   font-size: 0.8rem;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 700px) {
+  .skill-main {
+    height: 126vh;
+    width: 141vw;
+  }
+  .skill-start {
+    font-size: 2rem;
+    padding-left: 0rem;
+  }
+  .skill-start::before {
+    display: none;
+  }
+  .skill-end {
+    font-size: 2.5rem;
+  }
+  .skill-card {
+    grid-template-columns: auto auto;
+  }
+  .skill-description {
+    display: none;
+  }
+  .image-wrapper svg {
+    font-size: 4rem;
+  }
+  .image-wrapper {
+    height: 8rem;
+    width: 7rem;
+  }
+  .skill_title {
+    font-size: 1.8rem;
+  }
+}
