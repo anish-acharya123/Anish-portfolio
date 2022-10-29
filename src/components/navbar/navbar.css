@@ -8,6 +8,11 @@ nav {
   z-index: 10;
   background-color: #fff;
 }
+
+.nav-img {
+  width: 70px;
+  height: 80px;
+}
 .toggle {
   background-color: #fff;
   /* background-color: #e7e7e7; */
@@ -89,7 +94,12 @@ ul {
 @media screen and (max-width: 700px) {
   nav {
     width: 140vw;
+    height: 7rem;
     transition: 0.5s;
+  }
+  .nav-img {
+    width: 100px;
+    height: 100px;
   }
   .nav-main {
     padding: 1rem 1rem 0rem 7rem;
@@ -151,7 +161,7 @@ ul {
   }
 
   .btn1 svg {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .hamburger {
     display: block;
@@ -163,6 +173,42 @@ ul {
     transition: all 0.5s;
   }
   .hamburger svg {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  nav {
+    width: 150vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  nav {
+    width: 160vw;
+  }
+}
+@media screen and (max-width: 540px) {
+  nav {
+    width: 170vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-main {
+    padding: 1rem 0rem 0rem 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav {
+    width: 180vw;
+  }
+}
+@media screen and (max-width: 455px) {
+  nav {
+    width: 190vw;
+  }
+}
+@media screen and (max-width: 430px) {
+  nav {
+    width: 209vw;
   }
 }

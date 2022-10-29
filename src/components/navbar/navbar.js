@@ -50,7 +50,7 @@ export default function Navbar(props) {
         <div className="nav-main">
           <div className="nav-content">
             <a href="#">
-              <img src={props.img} width="70" height="80" alt="error" />
+              <img className="nav-img" src={props.img} alt="error" />
             </a>
 
             <ul

@@ -98,7 +98,7 @@ span {
 /* media query start  */
 @media screen and (max-width: 700px) {
   .home-main {
-    height: 127vh;
+    height: 137vh;
     width: 100vw;
   }
   .home-content {
@@ -143,5 +143,30 @@ span {
     margin: 0 0 0 13rem;
     padding: 0.5rem 5rem 0.5rem 5rem;
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .home-main {
+    height: 137vh;
+    width: 110vw;
+  }
+}
+@media screen and (max-width: 610px) {
+  .home-main {
+    height: 150vh;
+    width: 110vw;
+  }
+}
+@media screen and (max-width: 549px) {
+  .home-main {
+    height: 159vh;
+    width: 114vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .home-main {
+    height: 182vh;
+    width: 116vw;
   }
 }
