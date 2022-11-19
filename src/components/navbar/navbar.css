@@ -184,3 +184,27 @@ ul {
     font-size: 3.5rem;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .nav-img {
+    width: 66px;
+    height: 58px;
+  }
+  .btn1 svg {
+    font-size: 2.2rem;
+  }
+  .hamburger svg {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .nav-img {
+    width: 57px;
+  }
+  .btn1 svg {
+    font-size: 2rem;
+  }
+  .hamburger svg {
+    font-size: 2.8rem;
+  }
+}
