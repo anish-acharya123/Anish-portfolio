@@ -12,8 +12,12 @@ export default function Navbar(props) {
     let navbar = document.querySelector(".nav-main");
     if (window.scrollY > 125 && props.mode === "light") {
       navbar.classList.add("toggle");
+      ul.classList.add("toggle");
+      ul.classList.remove("toggle-ul");
     } else {
       navbar.classList.remove("toggle");
+      ul.classList.remove("toggle");
+      ul.classList.add("toggle-ul");
     }
     // console.log(navbar);
   };
@@ -28,14 +32,18 @@ export default function Navbar(props) {
   let notCross = "charm:menu-hamburger";
   let Cross = "charm:cross";
   const [apply, setApply] = useState(false);
+  // const [putin, setPutin] = useState(false);
 
+  let ul = document.querySelector(".navbar-ul");
+  let link = document.querySelector(".nav-items");
   const change = () => {
     setApply(!apply);
-    let ul = document.querySelector(".navbar-ul");
     if (apply === true) {
       ul.classList.add("none");
+      link.classList.add("none");
     } else {
       ul.classList.remove("none");
+      link.classList.remove("none");
     }
   };
 
@@ -57,9 +65,7 @@ export default function Navbar(props) {
               className="navbar-ul"
               id="ul"
               style={{
-                backgroundColor: `${
-                  props.mode === "black" ? "black" : "white"
-                }`,
+                backgroundColor: `${props.mode === "black" ? "black" : ""}`,
               }}
             >
               {Links.map((link) => (
@@ -73,7 +79,7 @@ export default function Navbar(props) {
                   to={`${link.path}`}
                   style={{ color: `${props.textcolor}` }}
                 >
-                  <li className={`nav-items`} key={link.id}>
+                  <li className={`nav-items`} onClick={change} key={link.id}>
                     {link.item}
                   </li>
                 </Link>

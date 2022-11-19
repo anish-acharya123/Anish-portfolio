@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   padding: 3.5rem 0 0 0;
-  height: 83vh;
+  /* width: 100vw; */
+  height: 100vh;
 }
 .project-start {
   position: relative;
@@ -24,16 +25,23 @@
   font-size: 1.5rem;
 }
 .project-card {
-  display: grid;
-  gap: 50px 100px;
-  grid-template-columns: auto auto auto;
+  /* display: grid; */
+  /* gap: 50px 100px; */
+  /* grid-template-columns: auto auto auto; */
   /* background-color: #2196f3; */
   padding: 10px;
   margin-top: 6rem;
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transition: all 0.2 linear;
 }
 .project-card-section {
-  height: 22rem;
-  width: 20rem;
+  /* height: 22rem; */
+  /* width: 20rem; */
   /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
@@ -46,6 +54,11 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  /* height: 200px; */
+  background: #81ecec;
+  box-shadow: 0 0 20px #bac3c3;
+  flex: 1 1 200px;
+  margin: 20px;
 }
 
 .project-image-wrapper {

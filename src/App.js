@@ -8,7 +8,7 @@ import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import { Icon } from "@iconify/react";
 import img from "./assets/icons/logo.svg";
-import img1 from "./assets/icons/logo2.svg";
+import img1 from "./assets/icons/dark.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 

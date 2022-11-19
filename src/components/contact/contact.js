@@ -40,7 +40,7 @@ export default function Contact(props) {
               <div className="contact-icon">{contact.icon}</div>
               <div className="contact-details-all">
                 <div className="contact-name">{contact.item}</div>
-                <div className="contact-details">{contact.details}</div>
+                <div className="contact-details">{contact.detail}</div>
               </div>
             </div>
           ))}

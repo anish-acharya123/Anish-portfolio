@@ -41,14 +41,16 @@ export default function Home(props) {
               </a>
             ))}
           </div>
-          <button
-            type="button"
-            style={{ color: `${props.textcolor}` }}
-            className="btn2"
-            id="home-btn"
-          >
-            Resume
-          </button>
+          <div className="home-resume">
+            <button
+              type="button"
+              style={{ color: `${props.textcolor}` }}
+              className="btn2"
+              id="home-btn"
+            >
+              Resume
+            </button>
+          </div>
         </div>
         <div className="home-second">
           <div className="image-div"></div>
