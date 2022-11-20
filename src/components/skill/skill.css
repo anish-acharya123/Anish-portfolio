@@ -114,7 +114,7 @@
 }
 @media screen and (max-width: 490px) {
   .skill-main {
-    width: 101vw;
+    /* width: 101vw; */
   }
   .skill-card-section {
     height: 13rem;
