@@ -1,50 +1,25 @@
 import React, { useState } from "react";
-// import "bootstrap/dist/css/bootstrap.css";
-// import img from "../assets/icons/logo.svg";
 import { Icon } from "@iconify/react";
 import { Links } from "../../data";
-// import { NavLink } from "react-router-dom";
 import "./navbar.css";
 import { Link } from "react-scroll";
 
 export default function Navbar(props) {
-  const changeBackground = () => {
-    let navbar = document.querySelector(".nav-main");
+  const [scroll, setScroll] = useState(false);
+  window.addEventListener("scroll", () => {
     if (window.scrollY > 125 && props.mode === "light") {
-      navbar.classList.add("toggle");
-      ul.classList.add("toggle");
-      ul.classList.remove("toggle-ul");
+      setScroll(true);
     } else {
-      navbar.classList.remove("toggle");
-      ul.classList.remove("toggle");
-      ul.classList.add("toggle-ul");
+      setScroll(false);
     }
-    // console.log(navbar);
-  };
-  window.addEventListener("scroll", changeBackground);
+  });
 
-  // const [move, setMove] = useState();
-  // document.addEventListener("scroll", () => {
-  //   const maxHeight = document.body.scrollHeight - window.innerHeight;
-  //   setMove((window.pageYOffset * 100) / maxHeight);
-  // });
+  let notCross = <Icon icon="charm:menu-hamburger" />;
+  let Cross = <Icon icon="charm:cross" />;
+  const [apply, setApply] = useState(true);
 
-  let notCross = "charm:menu-hamburger";
-  let Cross = "charm:cross";
-  const [apply, setApply] = useState(false);
-  // const [putin, setPutin] = useState(false);
-
-  let ul = document.querySelector(".navbar-ul");
-  let link = document.querySelector(".nav-items");
   const change = () => {
     setApply(!apply);
-    if (apply === true) {
-      ul.classList.add("none");
-      link.classList.add("none");
-    } else {
-      ul.classList.remove("none");
-      link.classList.remove("none");
-    }
   };
 
   return (
@@ -55,14 +30,17 @@ export default function Navbar(props) {
           backgroundColor: `${props.mode === "black" ? "black" : ""}`,
         }}
       >
-        <div className="nav-main">
+        <div className={scroll === true ? "nav-main toggle " : "nav-main"}>
           <div className="nav-content">
             <a href="#">
               <img className="nav-img" src={props.img} alt="error" />
             </a>
 
             <ul
-              className="navbar-ul"
+              className={`navbar-ul  ${
+                (apply === true ? "toggle none" : "") ||
+                (scroll === true && apply === false ? "toggle " : "")
+              }`}
               id="ul"
               style={{
                 backgroundColor: `${props.mode === "black" ? "black" : ""}`,
@@ -96,7 +74,7 @@ export default function Navbar(props) {
                   color: `${props.textcolor}`,
                 }}
               >
-                <Icon icon={apply ? Cross : notCross} />
+                {apply === true ? notCross : Cross}
               </button>
               <button
                 type="button"

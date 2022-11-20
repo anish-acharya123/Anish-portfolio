@@ -162,8 +162,11 @@ span {
     height: 18rem;
     width: 18rem;
   }
+  .home-second {
+    margin-right: 3rem;
+  }
   .home-first {
-    padding: 0rem 0rem 2rem 1rem;
+    padding: 0rem 0rem 2rem 0rem;
   }
   .name-start {
     font-size: 2rem;
