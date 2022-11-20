@@ -70,3 +70,85 @@
   font-size: 0.8rem;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 700px) {
+  .skill-card {
+    grid-template-columns: auto auto;
+    padding: 2rem;
+  }
+  .skill-description {
+    display: none;
+  }
+  .skill-end {
+    font-size: 2.5rem;
+  }
+
+  .skill-start {
+    font-size: 2rem;
+  }
+  .skill_title {
+    font-size: 1.5rem;
+  }
+  .image-wrapper {
+    height: 10rem;
+    width: 10rem;
+  }
+  .image-wrapper svg {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .skill-card-section {
+    width: 12rem;
+  }
+  .image-wrapper {
+    height: 8rem;
+    width: 8rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .skill-card-section {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 490px) {
+  .skill-main {
+    width: 101vw;
+  }
+  .skill-card-section {
+    height: 13rem;
+    width: 10rem;
+  }
+  .image-wrapper {
+    height: 7rem;
+    width: 7rem;
+  }
+  .image-wrapper svg {
+    font-size: 4rem;
+  }
+  .skill-card {
+    padding: 6rem;
+    gap: 50px 41px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .skill-card {
+    gap: 47px 24px;
+  }
+  .skill-card-section {
+    width: 8rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .skill-card-section {
+    height: 11rem;
+    width: 7rem;
+  }
+  .image-wrapper {
+    height: 6rem;
+  }
+  .skill-card {
+    gap: 83px 25px;
+  }
+}

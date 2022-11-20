@@ -4,13 +4,14 @@ import { Skills } from "../../data";
 
 export default function Skill(props) {
   return (
-    <div className="skill-main" id="skill">
-      <div
-        className="skill-content"
-        style={{
-          backgroundColor: `${props.mode === "light" ? "#f0f0f0" : "black"}`,
-        }}
-      >
+    <div
+      className="skill-main"
+      id="skill"
+      style={{
+        backgroundColor: `${props.mode === "light" ? "#f0f0f0" : "black"}`,
+      }}
+    >
+      <div className="skill-content">
         <div className="skill-start">SERVICES</div>
         <div className="skill-end">Specialized in</div>
         <div className="skill-card">
