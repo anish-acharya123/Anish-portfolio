@@ -178,6 +178,9 @@ span {
   .home-description {
     font-size: 1.5rem;
   }
+  .home-description {
+    width: 95%;
+  }
 }
 @media screen and (max-width: 390px) {
   .home-second {

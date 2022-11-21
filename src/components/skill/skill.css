@@ -128,7 +128,7 @@
     font-size: 4rem;
   }
   .skill-card {
-    padding: 6rem;
+    padding: 3rem 6rem 6rem 6rem;
     gap: 50px 41px;
   }
 }
@@ -143,12 +143,15 @@
 @media screen and (max-width: 330px) {
   .skill-card-section {
     height: 11rem;
-    width: 7rem;
+    width: 6rem;
   }
   .image-wrapper {
     height: 6rem;
   }
   .skill-card {
-    gap: 83px 25px;
+    gap: 45px 25px;
+  }
+  .skill_title {
+    font-size: 1.3rem;
   }
 }

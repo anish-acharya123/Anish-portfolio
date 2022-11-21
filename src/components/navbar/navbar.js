@@ -20,7 +20,7 @@ export default function Navbar(props) {
 
   const change = () => {
     setApply(!apply);
-    if (apply === true) {
+    if (apply === true && window.innerWidth < 700) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";

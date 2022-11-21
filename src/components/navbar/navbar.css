@@ -101,6 +101,7 @@ ul {
     width: 100%;
     height: 6.1rem;
     transition: 0.5s;
+    /* overflow: hidden; */
   }
   .nav-img {
     width: 83px;
