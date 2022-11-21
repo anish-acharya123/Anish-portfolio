@@ -20,6 +20,11 @@ export default function Navbar(props) {
 
   const change = () => {
     setApply(!apply);
+    if (apply === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
   };
 
   return (
