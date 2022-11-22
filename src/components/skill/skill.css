@@ -14,6 +14,7 @@
   position: relative;
   /* padding-left: 2rem; */
   color: gray;
+  font-size: 1.1rem;
   letter-spacing: 4px;
 }
 .skill-start::before {
@@ -80,12 +81,12 @@
     display: none;
   }
   .skill-end {
-    font-size: 2rem;
+    /* font-size: 2rem; */
   }
 
   .skill-start {
-    font-size: 2rem;
-    letter-spacing: 0;
+    /* font-size: 2rem; */
+    /* letter-spacing: 0; */
   }
   .skill_title {
     font-size: 1.5rem;
