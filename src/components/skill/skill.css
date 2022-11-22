@@ -80,11 +80,12 @@
     display: none;
   }
   .skill-end {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .skill-start {
     font-size: 2rem;
+    letter-spacing: 0;
   }
   .skill_title {
     font-size: 1.5rem;

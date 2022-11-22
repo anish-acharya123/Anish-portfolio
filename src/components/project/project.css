@@ -46,7 +46,7 @@
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-  background-color: rgb(232, 230, 230);
+  background-color: rgb(233, 246, 250);
   color: black;
   /* padding: 0 0 5rem 0; */
   border-radius: 1rem;
@@ -54,7 +54,7 @@
   position: relative;
   cursor: pointer;
   /* height: 200px; */
-  background: #81ecec;
+  /* background: #81ecec; */
   box-shadow: 0 0 20px #bac3c3;
   flex: 1 1 200px;
   margin: 20px;

@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import eProperty from "./assets/imgaes/eProperty.png";
 import Holi from "./assets/imgaes/holi.png";
 import Textanalyzer from "./assets/imgaes/textanalyzer.png";
+import Tip from "./assets/imgaes/tip.jpg";
 
 //importing icons for skills
 const html = <Icon icon="akar-icons:html-fill" color="#0087ca" />;
@@ -113,6 +114,14 @@ export const Projects = [
     source: "Bootstrap",
     link: `https://text-analyzer-two.vercel.app/`,
     description: " word counter use to manipulate your text .",
+  },
+  {
+    id: 4,
+    name: "Tips Calculator",
+    img: Tip,
+    source: "JavaScript",
+    link: `https://anish-acharya123.github.io/Tips-Calculator/`,
+    description: " which calculate your Tips.",
   },
 ];
 
