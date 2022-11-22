@@ -99,7 +99,7 @@ export const Projects = [
     description: "eProperty Nepal - Buy your dream house",
   },
   {
-    id: 1,
+    id: 2,
     name: "Holi Project",
     img: Holi,
     source: "Html/Css",
@@ -107,10 +107,10 @@ export const Projects = [
     description: "Heppy Holi to all my friends out there.",
   },
   {
-    id: 1,
+    id: 3,
     name: "Textanalyzer- Text Modifier",
     img: Textanalyzer,
-    source: "React/Bootstrap",
+    source: "Bootstrap",
     link: `https://text-analyzer-two.vercel.app/`,
     description: " word counter use to manipulate your text .",
   },

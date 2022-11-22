@@ -11,7 +11,10 @@ export default function project() {
         <div className="project-end">Featured Portfolio</div>
         <div className="project-card">
           {Projects.map((project, id) => (
-            <div className="project-card-section" key={project.id}>
+            <div
+              className={`project-card-section span-${project.id}`}
+              key={project.id}
+            >
               <img src={project.img} className="project-image-wrapper" alt="" />
               <div className="project_title">{project.name}</div>
               <div className="project-info">
