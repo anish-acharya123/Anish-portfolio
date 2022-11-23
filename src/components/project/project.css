@@ -68,6 +68,7 @@
   box-shadow: 0 0 10px 1px rgb(0 0 0 / 9%);
   flex: 1 1 200px;
   /* margin: 20px; */
+  margin-bottom: 2rem;
 }
 
 .project-image-wrapper {
@@ -161,9 +162,10 @@
   }
   .project-card {
     grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    margin-top: 2rem;
   }
   .project-card-section {
-    height: auto;
+    height: 22rem;
     width: 100%;
   }
   .project_title {
