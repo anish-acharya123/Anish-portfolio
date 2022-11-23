@@ -43,8 +43,9 @@ export default function Navbar(props) {
     (props.mode === "light" && scroll === false ? img : "") ||
     (props.mode === "black" ? img1 : "")
   }`;
-  console.log(scroll);
-  console.log(apply);
+
+  // console.log(scroll);
+  // console.log(apply);
 
   return (
     <div>
@@ -52,7 +53,7 @@ export default function Navbar(props) {
         style={{
           color: `${props.textcolor}`,
 
-          backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
+          backgroundColor: `${props.mode === "black" ? "#2e2e2e" : "white"}`,
         }}
       >
         <div className={`nav-main ${scroll === true ? " toggle " : ""}`}>

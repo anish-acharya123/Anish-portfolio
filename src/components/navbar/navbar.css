@@ -18,6 +18,7 @@ nav {
   /* background-color: #fff; */
   /* background-color: #e7e7e7; */
   background-color: #0087ca;
+
   /* color: white; */
 }
 .navbar-ul.toggle {
@@ -32,14 +33,11 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  padding-right: 15%;
+  padding-left: 14%;
+  /* padding: 0px 10%; */
+  justify-content: space-between;
 }
-
-/* .nav-main .active > .nav-items {
-  color: #0087ca;
-  color: black;
-  border-bottom: 1px solid #0087ca;
-} */
 
 .nav-items::after {
   content: "";
@@ -65,14 +63,14 @@ ul {
   /* border-top: 1px solid red; */
 }
 .link {
-  padding: 0 4rem 0 0;
+  padding: 0 3rem 0 0;
 }
 
 .nav-items {
   list-style: none;
   text-align: center;
   font-size: 1.2rem;
-  font-weight: 100;
+  font-weight: 500;
   cursor: pointer;
   position: relative;
 }
@@ -112,6 +110,32 @@ ul {
 
 /* media query start  */
 
+@media screen and (max-width: 1100px) {
+  .nav-content {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .link {
+    padding: 0 2rem 0 0;
+  }
+  ul {
+    /* padding: 0; */
+  }
+}
+@media screen and (max-width: 887px) {
+  ul {
+    padding: 0px 0px 0px 6rem;
+  }
+  .link {
+    padding: 0 1rem 0 0;
+  }
+}
+@media screen and (max-width: 785px) {
+  ul {
+    padding: 0px 0px 0px 4rem;
+  }
+}
+
 @media screen and (max-width: 700px) {
   nav {
     width: 100%;
@@ -127,6 +151,10 @@ ul {
     padding: 1rem 0rem 0rem 3rem;
   }
   .nav-content {
+    padding-right: 0;
+    padding-left: 0;
+    /* padding: 0px 10%; */
+
     justify-content: space-between;
   }
   .light-mode-ul {
