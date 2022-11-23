@@ -7,7 +7,7 @@ export default function Contact(props) {
       className="main-contact"
       style={{
         backgroundColor: `${
-          props.mode === "light" ? "rgb(233, 246, 250)" : "black"
+          props.mode === "light" ? "rgb(233, 246, 250)" : "#2e2e2e"
         }`,
       }}
       id="contact"

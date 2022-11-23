@@ -50,7 +50,7 @@ export default function Navbar(props) {
       <nav
         style={{
           color: `${props.textcolor}`,
-          backgroundColor: `${props.mode === "black" ? "black" : ""}`,
+          backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
         }}
       >
         <div
@@ -71,7 +71,7 @@ export default function Navbar(props) {
               }`}
               id="ul"
               style={{
-                backgroundColor: `${props.mode === "black" ? "black" : ""}`,
+                backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
               }}
             >
               {Links.map((link) => (

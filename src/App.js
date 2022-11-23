@@ -29,7 +29,7 @@ function App() {
       // setIcon(sun);
       setTextcolor("white");
       setMode("black");
-      document.body.style.backgroundColor = "black";
+      document.body.style.backgroundColor = "#2e2e2e";
       document.body.style.color = "white";
     } else {
       setImage(img);

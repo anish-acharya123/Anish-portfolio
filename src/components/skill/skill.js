@@ -9,7 +9,7 @@ export default function Skill(props) {
       id="skill"
       style={{
         backgroundColor: `${
-          props.mode === "light" ? "rgb(233, 246, 250)" : "black"
+          props.mode === "light" ? "rgb(233, 246, 250)" : "#2e2e2e"
         }`,
       }}
     >
