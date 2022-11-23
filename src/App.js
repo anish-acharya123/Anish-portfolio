@@ -16,9 +16,8 @@ function App() {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   });
-  let moon = <Icon icon="bytesize:moon" />;
-  let sun = <Icon icon="akar-icons:sun" color="white" />;
-  const [icon, setIcon] = useState(moon);
+
+  // const [icon, setIcon] = useState(moon);
   const [mode, setMode] = useState("light");
   const [textcolor, setTextcolor] = useState("black");
   const [image, setImage] = useState(img);
@@ -27,14 +26,14 @@ function App() {
     // mode = "light";
     if (mode === "light") {
       setImage(img1);
-      setIcon(sun);
+      // setIcon(sun);
       setTextcolor("white");
       setMode("black");
       document.body.style.backgroundColor = "black";
       document.body.style.color = "white";
     } else {
       setImage(img);
-      setIcon(moon);
+      // setIcon(moon);
       setTextcolor("black");
       setMode("light");
       document.body.style.backgroundColor = "white";
@@ -47,7 +46,7 @@ function App() {
       <Navbar
         img={image}
         textcolor={textcolor}
-        icon={icon}
+        // icon={icon}
         toogleMode={toogleMode}
         mode={mode}
       />

@@ -8,7 +8,9 @@ export default function Skill(props) {
       className="skill-main"
       id="skill"
       style={{
-        backgroundColor: `${props.mode === "light" ? "#f0f0f0" : "black"}`,
+        backgroundColor: `${
+          props.mode === "light" ? "rgb(233, 246, 250)" : "black"
+        }`,
       }}
     >
       <div className="skill-content">

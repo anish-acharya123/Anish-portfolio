@@ -149,9 +149,12 @@ span {
     height: 2.5rem;
     width: 3.5rem;
   }
+  .image-div {
+    width: 22rem;
+  }
 
   .home-second {
-    width: 42%;
+    width: 50%;
     margin-top: 5rem;
     display: block;
   }
@@ -172,6 +175,7 @@ span {
   .image-div {
     height: 18rem;
     width: 18rem;
+    /* margin-right: 10px; */
   }
   .home-second {
     margin-right: 3rem;

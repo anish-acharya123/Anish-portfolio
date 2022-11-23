@@ -3,6 +3,8 @@ import { Icon } from "@iconify/react";
 import { Links } from "../../data";
 import "./navbar.css";
 import { Link } from "react-scroll";
+import img from ".//..//../assets/icons/logo.svg";
+import img1 from ".//..//../assets/icons/dark.svg";
 
 export default function Navbar(props) {
   const [scroll, setScroll] = useState(false);
@@ -14,8 +16,6 @@ export default function Navbar(props) {
     }
   });
 
-  let notCross = <Icon icon="charm:menu-hamburger" />;
-  let Cross = <Icon icon="charm:cross" />;
   const [apply, setApply] = useState(true);
 
   const change = () => {
@@ -26,6 +26,24 @@ export default function Navbar(props) {
       document.body.style.overflow = "";
     }
   };
+
+  //icon color change
+
+  let changeColor = `${
+    (props.mode === "light" && scroll === true ? "white" : "") ||
+    (props.mode === "black" ? "white" : "")
+  }`;
+
+  let moon = <Icon icon="bytesize:moon" color={changeColor} />;
+  let sun = <Icon icon="akar-icons:sun" color={changeColor} />;
+
+  //change icon
+  let iconChange = `${
+    (props.mode === "light" && scroll === true ? img1 : "") ||
+    (props.mode === "light" && scroll === false ? img : "") ||
+    (props.mode === "black" ? img1 : "")
+  }`;
+  // console.log(scroll);
 
   return (
     <div>
@@ -38,13 +56,14 @@ export default function Navbar(props) {
         <div className={scroll === true ? "nav-main toggle " : "nav-main"}>
           <div className="nav-content">
             <a href="#">
-              <img className="nav-img" src={props.img} alt="error" />
+              <img className="nav-img" src={iconChange} alt="error" />
             </a>
 
             <ul
               className={`navbar-ul  ${
-                (apply === true ? "toggle none" : "") ||
-                (scroll === true && apply === false ? "toggle " : "")
+                (apply === true && window.innerWidth < 700
+                  ? "toggle none"
+                  : "") || (scroll === true && apply === false ? "toggle " : "")
               }`}
               id="ul"
               style={{
@@ -62,7 +81,23 @@ export default function Navbar(props) {
                   to={`${link.path}`}
                   style={{ color: `${props.textcolor}` }}
                 >
-                  <li className={`nav-items`} onClick={change} key={link.id}>
+                  <li
+                    className={`nav-items`}
+                    onClick={change}
+                    key={link.id}
+                    style={{
+                      color: `${
+                        props.mode === "light" && scroll === false
+                          ? "black"
+                          : "white"
+                      }`,
+                      // borderBottom: ` 1px solid ${
+                      //   props.mode === "light" && scroll === false
+                      //     ? "#0087ca"
+                      //     : "white"
+                      // }`,
+                    }}
+                  >
                     {link.item}
                   </li>
                 </Link>
@@ -70,20 +105,32 @@ export default function Navbar(props) {
             </ul>
             <div className="btn">
               <button type="button" className="btn1" onClick={props.toogleMode}>
-                {props.icon}
+                {props.mode === "light" ? moon : sun}
               </button>
               <button
                 className="hamburger"
                 onClick={change}
-                style={{
-                  color: `${props.textcolor}`,
-                }}
+                style={
+                  {
+                    // color: `${props.textcolor}`,
+                  }
+                }
               >
-                {apply === true ? notCross : Cross}
+                {apply === true ? (
+                  <Icon icon="charm:menu-hamburger" color={changeColor} />
+                ) : (
+                  <Icon icon="charm:cross" color={changeColor} />
+                )}
               </button>
               <button
                 type="button"
-                style={{ color: `${props.textcolor}` }}
+                style={{
+                  color: `${
+                    props.mode === "light" && scroll === false
+                      ? "black "
+                      : "White"
+                  }`,
+                }}
                 className="btn2"
                 id="navbar-btn"
               >
