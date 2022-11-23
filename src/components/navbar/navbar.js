@@ -9,7 +9,7 @@ import img1 from ".//..//../assets/icons/dark3.svg";
 export default function Navbar(props) {
   const [scroll, setScroll] = useState(false);
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 125 && props.mode === "light") {
+    if (window.scrollY > 125) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -50,14 +50,11 @@ export default function Navbar(props) {
       <nav
         style={{
           color: `${props.textcolor}`,
+
           backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
         }}
       >
-        <div
-          className={`nav-main ${
-            props.mode == "light" && scroll === true ? " toggle " : ""
-          }`}
-        >
+        <div className={`nav-main ${scroll === true ? " toggle " : ""}`}>
           <div className="nav-content">
             <a href="#">
               <img className="nav-img" src={iconChange} alt="error" />
@@ -70,9 +67,11 @@ export default function Navbar(props) {
                   : "") || (scroll === true && apply === false ? "toggle " : "")
               }`}
               id="ul"
-              style={{
-                backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
-              }}
+              style={
+                {
+                  // backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
+                }
+              }
             >
               {Links.map((link) => (
                 <Link
