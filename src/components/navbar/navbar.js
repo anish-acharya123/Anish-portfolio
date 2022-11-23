@@ -4,7 +4,7 @@ import { Links } from "../../data";
 import "./navbar.css";
 import { Link } from "react-scroll";
 import img from ".//..//../assets/icons/logo.svg";
-import img1 from ".//..//../assets/icons/dark.svg";
+import img1 from ".//..//../assets/icons/dark3.svg";
 
 export default function Navbar(props) {
   const [scroll, setScroll] = useState(false);
@@ -53,7 +53,11 @@ export default function Navbar(props) {
           backgroundColor: `${props.mode === "black" ? "black" : ""}`,
         }}
       >
-        <div className={scroll === true ? "nav-main toggle " : "nav-main"}>
+        <div
+          className={`nav-main ${
+            props.mode == "light" && scroll === true ? " toggle " : ""
+          }`}
+        >
           <div className="nav-content">
             <a href="#">
               <img className="nav-img" src={iconChange} alt="error" />
