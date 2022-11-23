@@ -43,7 +43,8 @@ export default function Navbar(props) {
     (props.mode === "light" && scroll === false ? img : "") ||
     (props.mode === "black" ? img1 : "")
   }`;
-  // console.log(scroll);
+  console.log(scroll);
+  console.log(apply);
 
   return (
     <div>
@@ -64,7 +65,9 @@ export default function Navbar(props) {
               className={`navbar-ul  ${
                 (apply === true && window.innerWidth < 700
                   ? "toggle none"
-                  : "") || (scroll === true && apply === false ? "toggle " : "")
+                  : "") ||
+                (scroll === true && apply === false ? "toggle " : "") ||
+                (props.mode === "light" ? "light-mode-ul" : "dark-mode-ul")
               }`}
               id="ul"
               style={

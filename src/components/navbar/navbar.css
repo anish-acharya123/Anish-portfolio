@@ -129,7 +129,10 @@ ul {
   .nav-content {
     justify-content: space-between;
   }
-  .navbar-ul {
+  .light-mode-ul {
+    background-color: #fff;
+  }
+  .dark-mode-ul {
     background-color: #2e2e2e;
   }
   .navbar-ul.toggle {
