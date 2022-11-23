@@ -67,9 +67,11 @@ export default function Navbar(props) {
                   : "") || (scroll === true && apply === false ? "toggle " : "")
               }`}
               id="ul"
-              style={{
-                backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
-              }}
+              style={
+                {
+                  // backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
+                }
+              }
             >
               {Links.map((link) => (
                 <Link
