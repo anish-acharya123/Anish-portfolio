@@ -29,11 +29,16 @@ export default function Home(props) {
           </div>
           <p className="home-description">
             {" "}
-            Currently studing Bsc.Csit at Butwal Multiple Campus
+            Currently studying Bsc.Csit at Butwal Multiple Campus
           </p>
           <div className="home-icons">
             {Icons.map((icon, id) => (
-              <a href={`${icon.link}`} key={`${icon.id}`} target="_blank">
+              <a
+                href={`${icon.link}`}
+                key={`${icon.id}`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Icon
                   icon={`${icon.svg}`}
                   color={props.mode === "light" ? "black" : "white"}

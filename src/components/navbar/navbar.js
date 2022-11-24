@@ -6,7 +6,7 @@ import { Link } from "react-scroll";
 import img from ".//..//../assets/icons/logo.svg";
 import img1 from ".//..//../assets/icons/dark3.svg";
 
-const themeGetter = JSON.parse(localStorage.getItem("mode")) || "[]";
+// const themeGetter = JSON.parse(localStorage.getItem("mode")) || "[]";
 
 export default function Navbar(props) {
   const [scroll, setScroll] = useState(false);
@@ -28,7 +28,7 @@ export default function Navbar(props) {
       document.body.style.overflow = "";
     }
 
-    toggleDarkmode();
+    // toggleDarkmode();
   };
 
   //icon color change
@@ -50,15 +50,15 @@ export default function Navbar(props) {
 
   //local storage
 
-  const [darkMode, setDarkmode] = useState(themeGetter);
+  // const [darkMode, setDarkmode] = useState(themeGetter);
 
-  useEffect(() => {
-    localStorage.setItem("mode", JSON.stringify(darkMode));
-  }, [darkMode]);
+  // useEffect(() => {
+  //   localStorage.setItem("mode", JSON.stringify(darkMode));
+  // }, [darkMode]);
 
-  const toggleDarkmode = () => {
-    setDarkmode(!darkMode);
-  };
+  // const toggleDarkmode = () => {
+  //   setDarkmode(!darkMode);
+  // };
 
   // console.log(scroll);
   // console.log(apply);
