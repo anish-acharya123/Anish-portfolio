@@ -165,7 +165,7 @@ ul {
     background-color: #2e2e2e;
   }
   .navbar-ul.toggle {
-    background-color: #0087ca;
+    background-color: #0d6895;
   }
   #navbar-btn {
     display: none;
@@ -183,7 +183,7 @@ ul {
     height: 93vh;
     width: 100%;
     transition: 0.5s;
-    animation: slide 0.5s;
+    animation: slide 0.3s;
     visibility: visible;
     /* animation-fill-mode: forwards; */
     /* opacity: 0; */
@@ -214,7 +214,7 @@ ul {
   }
 
   .none {
-    animation: slide-none 0.5s;
+    animation: slide-none 0.3s;
     animation-fill-mode: forwards;
   }
 
