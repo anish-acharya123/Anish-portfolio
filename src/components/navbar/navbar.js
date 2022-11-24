@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 import { Links } from "../../data";
 import "./navbar.css";
@@ -25,6 +25,8 @@ export default function Navbar(props) {
     } else {
       document.body.style.overflow = "";
     }
+
+    // toggleDarkmode();
   };
 
   //icon color change
@@ -43,6 +45,20 @@ export default function Navbar(props) {
     (props.mode === "light" && scroll === false ? img : "") ||
     (props.mode === "black" ? img1 : "")
   }`;
+
+  //local storage
+  // const themeGetter = () => {
+  //   return JSON.parse(localStorage.getItem("mode")) || false;
+  // };
+  // const [darkMode, setDarkmode] = useState(themeGetter());
+
+  // useEffect(() => {
+  //   localStorage.setItem("mode", JSON.stringify(darkMode));
+  // }, [darkMode]);
+
+  // const toggleDarkmode = () => {
+  //   setDarkmode(!darkMode);
+  // };
 
   // console.log(scroll);
   // console.log(apply);
