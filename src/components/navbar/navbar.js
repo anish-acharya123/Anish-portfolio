@@ -6,8 +6,6 @@ import { Link } from "react-scroll";
 import img from ".//..//../assets/icons/logo.svg";
 import img1 from ".//..//../assets/icons/dark3.svg";
 
-// const themeGetter = JSON.parse(localStorage.getItem("mode")) || "[]";
-
 export default function Navbar(props) {
   const [scroll, setScroll] = useState(false);
   window.addEventListener("scroll", () => {
@@ -27,8 +25,6 @@ export default function Navbar(props) {
     } else {
       document.body.style.overflow = "";
     }
-
-    // toggleDarkmode();
   };
 
   //icon color change
@@ -47,21 +43,6 @@ export default function Navbar(props) {
     (props.mode === "light" && scroll === false ? img : "") ||
     (props.mode === "black" ? img1 : "")
   }`;
-
-  //local storage
-
-  // const [darkMode, setDarkmode] = useState(themeGetter);
-
-  // useEffect(() => {
-  //   localStorage.setItem("mode", JSON.stringify(darkMode));
-  // }, [darkMode]);
-
-  // const toggleDarkmode = () => {
-  //   setDarkmode(!darkMode);
-  // };
-
-  // console.log(scroll);
-  // console.log(apply);
 
   return (
     <div>
@@ -87,11 +68,6 @@ export default function Navbar(props) {
                 (props.mode === "light" ? "light-mode-ul" : "dark-mode-ul")
               }`}
               id="ul"
-              style={
-                {
-                  // backgroundColor: `${props.mode === "black" ? "#2e2e2e" : ""}`,
-                }
-              }
             >
               {Links.map((link) => (
                 <Link
@@ -114,11 +90,6 @@ export default function Navbar(props) {
                           ? "black"
                           : "white"
                       }`,
-                      // borderBottom: ` 1px solid ${
-                      //   props.mode === "light" && scroll === false
-                      //     ? "#0087ca"
-                      //     : "white"
-                      // }`,
                     }}
                   >
                     {link.item}
@@ -130,15 +101,7 @@ export default function Navbar(props) {
               <button type="button" className="btn1" onClick={props.toogleMode}>
                 {props.mode === "light" ? moon : sun}
               </button>
-              <button
-                className="hamburger"
-                onClick={change}
-                style={
-                  {
-                    // color: `${props.textcolor}`,
-                  }
-                }
-              >
+              <button className="hamburger" onClick={change}>
                 {apply === true ? (
                   <Icon icon="charm:menu-hamburger" color={changeColor} />
                 ) : (

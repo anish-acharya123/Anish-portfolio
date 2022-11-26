@@ -5,12 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
 }
 .home-content {
   display: flex;
   width: 70%;
-
   align-items: center;
 }
 .home-first {
@@ -20,7 +18,6 @@
   position: relative;
   padding-left: 2rem;
   color: gray;
-  /* font-size: 2rem; */
 }
 
 .name-start::before {
@@ -88,8 +85,6 @@ span {
   width: 100%;
   height: 100%;
   top: 0;
-  /* right: 5rem; */
-  /* transform: rotate(0deg); */
   z-index: -1;
 }
 .image-div:hover {
@@ -98,7 +93,6 @@ span {
 .image-div:hover::before {
   transition: all 1s ease-in-out;
   transform: rotate(0deg);
-  /* background-color: red; */
 }
 
 /* media query start  */
@@ -172,7 +166,6 @@ span {
   }
   #home-btn {
     display: block;
-    /* margin: 0 0 0 13rem; */
     padding: 0.5rem 5rem 0.5rem 5rem;
     font-size: 1.5rem;
   }
@@ -181,7 +174,6 @@ span {
   .image-div {
     height: 18rem;
     width: 18rem;
-    /* margin-right: 10px; */
   }
   .home-second {
     margin-right: 3rem;
@@ -198,9 +190,6 @@ span {
   .writer,
   .home-description {
     font-size: 1.5rem;
-  }
-  .home-description {
-    /* width: 95%; */
   }
 }
 @media screen and (max-width: 390px) {

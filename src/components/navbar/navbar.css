@@ -1,12 +1,9 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap"); */
 nav {
   width: 100vw;
   height: 5rem;
-  /* border: 2px solid red; */
   font-family: "Poppins", sans-serif;
   position: fixed;
   z-index: 10;
-  /* background-color: #fff; */
 }
 
 .nav-img {
@@ -15,21 +12,12 @@ nav {
 }
 
 .toggle {
-  /* background-color: #fff; */
-  /* background-color: #e7e7e7; */
-  /* background-color: #0087ca; */
   background-color: #0d6895;
   transition: all 0.5s ease-in-out;
-
-  /* color: white; */
 }
 .navbar-ul.toggle {
   background-color: transparent;
 }
-
-/* .toggle .link .nav-items {
-  color: white;
-} */
 
 .nav-content {
   display: flex;
@@ -37,7 +25,6 @@ nav {
   align-items: center;
   padding-right: 15%;
   padding-left: 14%;
-  /* padding: 0px 10%; */
   justify-content: space-between;
 }
 
@@ -62,7 +49,6 @@ ul {
   flex-flow: row nowrap;
   padding: 0px 0px 0px 10rem;
   background-color: transparent;
-  /* border-top: 1px solid red; */
 }
 .link {
   padding: 0 3rem 0 0;
@@ -83,7 +69,6 @@ ul {
 }
 
 .btn1 {
-  /* height: 12rem; */
   margin-right: 0.5rem;
   background-color: transparent;
   border: none;
@@ -103,7 +88,6 @@ ul {
   cursor: pointer;
   border-radius: 3px;
   padding: 0.5rem 2rem 0.5rem 2rem;
-  /* font-family: "Poppins", sans-serif; */
 }
 
 .toggle #navbar-btn {
@@ -140,7 +124,6 @@ ul {
     width: 100%;
     height: 6.1rem;
     transition: 0.5s;
-    /* overflow: hidden; */
   }
   .nav-img {
     width: 83px;
@@ -152,8 +135,6 @@ ul {
   .nav-content {
     padding-right: 0;
     padding-left: 0;
-    /* padding: 0px 10%; */
-
     justify-content: space-between;
   }
   .light-mode-ul {
@@ -174,8 +155,6 @@ ul {
   ul {
     flex-flow: column nowrap;
     position: absolute;
-    /* justify-content: space-evenly; */
-    /* background-color: #2e2e2e; */
     top: 5.1rem;
     right: 0;
     height: 93vh;
@@ -183,8 +162,6 @@ ul {
     transition: 0.5s;
     animation: slide 0.3s;
     visibility: visible;
-    /* animation-fill-mode: forwards; */
-    /* opacity: 0; */
   }
 
   @keyframes slide {
