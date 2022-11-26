@@ -142,6 +142,7 @@ textarea {
   .main-contact {
     height: auto;
     padding: 3rem 0 5rem 0rem;
+    overflow: hidden;
   }
   .contact-contain {
     flex-direction: column;
@@ -219,5 +220,9 @@ textarea {
     margin: 0;
   }
 }
-@media screen and (max-width: 405px) {
+@media screen and (max-width: 400px) {
+  .contact-second {
+    width: 150%;
+    scale: 0.8;
+  }
 }
