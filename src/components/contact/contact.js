@@ -17,25 +17,35 @@ export default function Contact(props) {
         <div className="contact-end"> Send us a Messsage</div>
       </div>
       <div className="contact-contain">
-        <div className="contact-first">
-          <input className="contact-form" type="text" placeholder="Name" />
+        <form
+          className="contact-first"
+          action="https://formspree.io/f/mvoynbbb"
+          method="post"
+        >
+          <input
+            className="contact-form"
+            type="text"
+            placeholder="Name"
+            name="Username"
+          />
           <input
             className="contact-form"
             type="email"
             placeholder="Email"
+            name="Email"
             required
           />
           <textarea
-            name=""
+            name="message"
             placeholder="Message"
             id=""
             cols="30"
             rows="10"
           ></textarea>
-          <button className="contact-btn" type="button">
+          <button className="contact-btn" type="submit">
             send message
           </button>
-        </div>
+        </form>
         <div className="contact-second">
           {Contacts.map((contact, id) => (
             <div className="contact-second-all">
