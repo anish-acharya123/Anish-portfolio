@@ -6,6 +6,7 @@ import Skill from "./components/skill/skill";
 import Project from "./components/project/project";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
+import Loader from "./components/Loader/loader";
 import img from "./assets/icons/logo.svg";
 import img1 from "./assets/icons/dark.svg";
 import Aos from "aos";
@@ -15,34 +16,23 @@ function App() {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   });
-  const user_fav_mode = localStorage.getItem('mode')
+  const user_fav_mode = localStorage.getItem("mode");
 
   // const [icon, setIcon] = useState(moon);
-  const [mode, setMode] = useState(user_fav_mode?user_fav_mode:"light");
+  const [mode, setMode] = useState(user_fav_mode ? user_fav_mode : "light");
   const [textcolor, setTextcolor] = useState("black");
   const [image, setImage] = useState(img);
-useEffect(()=>{
-  localStorage.setItem('mode',mode)
-},[mode])
+  useEffect(() => {
+    localStorage.setItem("mode", mode);
+  }, [mode]);
 
-
-if(mode==="light"){
-  document.body.style.backgroundColor = "white";
-  document.body.style.color = "black";
-}
-else{
-  document.body.style.backgroundColor = "#2e2e2e";
-  document.body.style.color = "white";
-}
-
-
-
-
-
-
-
-
-
+  if (mode === "light") {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+  } else {
+    document.body.style.backgroundColor = "#2e2e2e";
+    document.body.style.color = "white";
+  }
 
   const toogleMode = () => {
     // mode = "light";
@@ -51,8 +41,7 @@ else{
       // setIcon(sun);
       setTextcolor("white");
       setMode("black");
-      
-    } else if(mode==="black") {
+    } else if (mode === "black") {
       setImage(img);
       // setIcon(moon);
       setTextcolor("black");
@@ -62,20 +51,33 @@ else{
     }
   };
 
+  //for loader
+  const [loader, setLoader] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 3000);
+  });
+
   return (
     <div className="App">
-      <Navbar
-        img={image}
-        textcolor={textcolor}
-        // icon={icon}
-        toogleMode={toogleMode}
-        mode={mode}
-      />
-      <Home mode={mode} textcolor={textcolor} />
-      <Skill mode={mode} />
-      <Project />
-      <Contact mode={mode} />
-      <Footer mode={mode} />
+      {loader ? (
+        <Loader mode={mode} img={image} />
+      ) : (
+        <>
+          <Navbar
+            img={image}
+            textcolor={textcolor}
+            toogleMode={toogleMode}
+            mode={mode}
+          />
+          <Home mode={mode} textcolor={textcolor} />
+          <Skill mode={mode} />
+          <Project />
+          <Contact mode={mode} />
+          <Footer mode={mode} />
+        </>
+      )}
     </div>
   );
 }
