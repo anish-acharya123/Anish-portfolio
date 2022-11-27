@@ -49,7 +49,7 @@ export default function Home(props) {
           <div className="home-resume">
             <button
               type="button"
-              style={{ color: `${props.textcolor}` }}
+              style={{ color: `${props.mode === "light" ? "black" : "white"}` }}
               className="btn2"
               id="home-btn"
             >
