@@ -16,9 +16,8 @@ function App() {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   });
-  const user_fav_mode = localStorage.getItem("mode");
 
-  // const [icon, setIcon] = useState(moon);
+  const user_fav_mode = localStorage.getItem("mode");
   const [mode, setMode] = useState(user_fav_mode ? user_fav_mode : "light");
   const [textcolor, setTextcolor] = useState("black");
   const [image, setImage] = useState(img);
@@ -35,15 +34,12 @@ function App() {
   }
 
   const toogleMode = () => {
-    // mode = "light";
     if (mode === "light") {
       setImage(img1);
-      // setIcon(sun);
       setTextcolor("white");
       setMode("black");
     } else if (mode === "black") {
       setImage(img);
-      // setIcon(moon);
       setTextcolor("black");
       setMode("light");
       document.body.style.backgroundColor = "white";
