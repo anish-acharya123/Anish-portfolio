@@ -18,7 +18,7 @@ export default function Skill(props) {
         <div className="skill-end">Specialized in</div>
         <div className="skill-card">
           {Skills.map((skill, id) => (
-            <div className="skill-card-section">
+            <div className="skill-card-section" key={id}>
               <div className="image-wrapper">{skill.icon}</div>
               <div className="skill_title">{skill.title}</div>
               <div className="skill-description">{skill.Description}</div>

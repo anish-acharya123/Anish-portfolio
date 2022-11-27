@@ -48,7 +48,7 @@ export default function Contact(props) {
         </form>
         <div className="contact-second">
           {Contacts.map((contact, id) => (
-            <div className="contact-second-all">
+            <div className="contact-second-all" key={id}>
               <div className="contact-icon">{contact.icon}</div>
               <div className="contact-details-all">
                 <div className="contact-name">{contact.item}</div>

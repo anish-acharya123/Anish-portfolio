@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { Icon } from "@iconify/react";
 import { Links } from "../../data";
 import "./navbar.css";
@@ -55,7 +55,7 @@ export default function Navbar(props) {
       >
         <div className={`nav-main ${scroll === true ? " toggle " : ""}`}>
           <div className="nav-content">
-            <a href="#">
+            <a href="/">
               <img className="nav-img" src={iconChange} alt="error" />
             </a>
 
@@ -71,6 +71,7 @@ export default function Navbar(props) {
             >
               {Links.map((link) => (
                 <Link
+                  key = {link.id}
                   activeClass="active"
                   className="link"
                   spy={true}

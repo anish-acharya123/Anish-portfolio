@@ -6,7 +6,6 @@ import Skill from "./components/skill/skill";
 import Project from "./components/project/project";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
-import { Icon } from "@iconify/react";
 import img from "./assets/icons/logo.svg";
 import img1 from "./assets/icons/dark.svg";
 import Aos from "aos";
@@ -16,11 +15,34 @@ function App() {
   useEffect(() => {
     Aos.init({ duration: 1500 });
   });
+  const user_fav_mode = localStorage.getItem('mode')
 
   // const [icon, setIcon] = useState(moon);
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState(user_fav_mode?user_fav_mode:"light");
   const [textcolor, setTextcolor] = useState("black");
   const [image, setImage] = useState(img);
+useEffect(()=>{
+  localStorage.setItem('mode',mode)
+},[mode])
+
+
+if(mode==="light"){
+  document.body.style.backgroundColor = "white";
+  document.body.style.color = "black";
+}
+else{
+  document.body.style.backgroundColor = "#2e2e2e";
+  document.body.style.color = "white";
+}
+
+
+
+
+
+
+
+
+
 
   const toogleMode = () => {
     // mode = "light";
@@ -29,9 +51,8 @@ function App() {
       // setIcon(sun);
       setTextcolor("white");
       setMode("black");
-      document.body.style.backgroundColor = "#2e2e2e";
-      document.body.style.color = "white";
-    } else {
+      
+    } else if(mode==="black") {
       setImage(img);
       // setIcon(moon);
       setTextcolor("black");
