@@ -19,7 +19,7 @@ export default function Home(props) {
               <span>
                 <Typewriter
                   options={{
-                    strings: ["Full Stack Web Developer", "Designer"],
+                    strings: ["Frontend Web Developer", "Designer"],
                     autoStart: true,
                     loop: true,
                   }}

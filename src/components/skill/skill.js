@@ -13,7 +13,7 @@ export default function Skill(props) {
         }`,
       }}
     >
-      <div className="skill-content">
+      <div className="skill-content" data-aos="fade-up">
         <div className="skill-start">SERVICES</div>
         <div className="skill-end">Specialized in</div>
         <div className="skill-card">

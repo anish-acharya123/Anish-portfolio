@@ -14,7 +14,7 @@ import "aos/dist/aos.css";
 
 function App() {
   useEffect(() => {
-    Aos.init({ duration: 1500 });
+    Aos.init({ duration: 700 });
   });
 
   const user_fav_mode = localStorage.getItem("mode");
