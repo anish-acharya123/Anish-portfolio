@@ -9,14 +9,8 @@ import Footer from "./components/footer/footer";
 import Loader from "./components/Loader/loader";
 import img from "./assets/icons/logo.svg";
 import img1 from "./assets/icons/dark.svg";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 function App() {
-  useEffect(() => {
-    Aos.init({ duration: 700 });
-  });
-
   const user_fav_mode = localStorage.getItem("mode");
   const [mode, setMode] = useState(user_fav_mode ? user_fav_mode : "light");
   const [textcolor, setTextcolor] = useState("black");

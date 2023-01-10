@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import { Links } from "../../data";
 import "./navbar.css";
@@ -71,7 +71,7 @@ export default function Navbar(props) {
             >
               {Links.map((link) => (
                 <Link
-                  key = {link.id}
+                  key={link.id}
                   activeClass="active"
                   className="link"
                   spy={true}

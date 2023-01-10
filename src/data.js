@@ -37,12 +37,24 @@ export const Links = [
 export const Icons = [
   {
     id: 1,
-    link: "#",
+    link: "https://www.facebook.com/anish.acharya.79230",
     svg: "eva:facebook-outline",
   },
-  { id: 2, link: "#", svg: "eva:github-outline" },
-  { id: 3, link: "#", svg: "lucide:linkedin" },
-  { id: 4, link: "#", svg: "ion:logo-instagram" },
+  {
+    id: 2,
+    link: "https://github.com/anish-acharya123",
+    svg: "eva:github-outline",
+  },
+  {
+    id: 3,
+    link: "https://www.linkedin.com/in/anish-acharya-819755212/",
+    svg: "lucide:linkedin",
+  },
+  {
+    id: 4,
+    link: "https://www.instagram.com/iamanish_acharya/",
+    svg: "ion:logo-instagram",
+  },
 ];
 
 //skills icon

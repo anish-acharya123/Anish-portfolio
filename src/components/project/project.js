@@ -9,7 +9,7 @@ export default function project() {
       <div>
         <div className="project-start">MY WORKS</div>
         <div className="project-end">Featured Portfolio</div>
-        <div className="project-card" data-aos="zoom-in-up">
+        <div className="project-card">
           {Projects.map((project, id) => (
             <div
               className={`project-card-section span-${project.id}`}
